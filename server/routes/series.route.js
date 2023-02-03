@@ -5,8 +5,7 @@ const router = express.Router();
 //EndPoints
 router.get('/',seriesCtrl.getSeries);
 router.get('/serie/:id', seriesCtrl.getSerie);
-router.put('/',seriesCtrl.updateSerie);
-router.get('/generos', seriesCtrl.getGeneros);
+router.get('/categoria/:id', seriesCtrl.getCategoria);
 
 
 module.exports = router;

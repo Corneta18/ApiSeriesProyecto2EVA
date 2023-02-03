@@ -15,8 +15,11 @@ app.use(cors());
 app.use(express.json());
 
 //Routes
-app.use('/', (req,res)=> res.send('API in /api/apiseries'));
+app.use('/', (req,res)=> res.send('Series in /api/apiseries'));
 app.use('api/apiseries', require('./routes/series.route'))
+
+app.use('/', (req, res) => res.send('Categorias in /api/apicategorias'))
+app.use('api/apicategorias', require('./routes/categoria.route'))
 
 
 //Start the server

@@ -8,5 +8,8 @@ const serieSchema = new Schema({
     capitulos: {type: Number, require: true},
     emision: {type: Number, require: true},
     sinopsis: {type: String, require: true},
-    puntuacion: {type: Float32Array, require: false}
+    puntuacion: [{
+        type: Number, require: false,
+        type: String, require: false
+    }]
 })
